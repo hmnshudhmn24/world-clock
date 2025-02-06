@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clock-container">
+    <h1>World Clock</h1>
+    
+    <div class="city-selector">
+      <label for="city-select">Choose a City:</label>
+      <select id="city-select" onchange="updateCityTime()">
+        <option value="New York">New York</option>
+        <option value="London">London</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Paris">Paris</option>
+        <option value="Sydney">Sydney</option>
+      </select>
+      <input type="text" id="custom-city" placeholder="Enter custom city">
+      <button onclick="addCustomCity()">Add Custom City</button>
+    </div>
+
+    <div id="clock-container"></div>
+
+    <div>
+      <label for="format-toggle">24-hour format:</label>
+      <input type="checkbox" id="format-toggle" onchange="toggleFormat()">  
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
